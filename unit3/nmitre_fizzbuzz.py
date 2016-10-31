@@ -4,7 +4,7 @@ end = int(end)
 nam = int(nam)
 
 for n in range(nam -1, end):
-    n = n+ 1
+    n = n + 1
     if n % 3 == 0 and n % 5 == 0:
         print("FizzBuzz")
     elif n % 3  == 0:
