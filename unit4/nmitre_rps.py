@@ -5,9 +5,9 @@ import random
 #   purpose: present player with options, use input() to get player move
 #   returns: the player's move as either 'r', 'p', or 's'
 def get_p1_move():
-    player_move = input("Choose your option: ")
-    if player_move = 
-#function name: get_comp_move():
+    players_move = input("Choose your move [r|p|s]: ")
+    return players_move
+    #function name: get_comp_move():
 #   arguments: none
 #   purpose: randomly generates the computer's move,
 #            either 'r' 'p' or 's'
@@ -27,6 +27,7 @@ def get_comp_move():
 #   purpose: allows the user to choose a number of rounds from 1 to 9.
 #   returns: the user-chosen number of rounds
 def get_rounds():
+    
     #code here
 
 #function name: get_round_winner
