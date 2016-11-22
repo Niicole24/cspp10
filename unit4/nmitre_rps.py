@@ -5,12 +5,12 @@ import random
 #   purpose: present player with options, use input() to get player move
 #   returns: the player's move as either 'r', 'p', or 's'
 def get_p1_move():
-    x = input("1 = Rock\n2 = Paper\n3 = Scissors\nEnter a Number from 1-3: ")
-    if x == "1":
+    N = input("1 = Rock\n2 = Paper\n3 = Scissors\n Enter a Number from 1-3: ")
+    if N == "1":
         return 'r'
-    elif x == "2":
+    elif N == "2":
         return 'p'
-    elif x == "3":
+    elif N == "3":
         return 's'
 
 #function name: get_comp_move():
