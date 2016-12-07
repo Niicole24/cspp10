@@ -2,12 +2,12 @@ import random
 
 
 def get_p1_move():
-    N = input("1 = Rock\n2 = Paper\n3 = Scissors\n Enter number from 1-3: ")
-    if N == "1":
+    X = input("1 = Rock\n2 = Paper\n3 = Scissors\n Enter number from 1-3: ")
+    if X == "1":
         return 'r'
-    elif N == "2":
+    elif X == "2":
         return 'p'
-    elif N == "3":
+    elif X == "3":
         return 's'
 
 
@@ -27,23 +27,32 @@ def get_rounds():
 
 def get_round_winner(p1smove,cmove):
     if p1smove == 'r' and cmove == 's':
-        return "The Player wins!"
+        print ("\nComputer chose scissors\n")
+        return "The player wins!"
     elif p1smove == 's' and cmove == 'p':
-        return "The Player wins!"
+        print ("\nComputer chose paper\n")
+        return "The player wins!"
     elif p1smove == 'p' and cmove == 'r':
-        return "The Player wins!"
+        print ("\nComputer chose rock\n")
+        return "The player wins!"
     elif p1smove == 'p' and cmove == "s":
+        print ("\nYou chose paper\n")
         return "The Computer Won!"
     elif p1smove == 's' and cmove == "r":
+        print ("\nYou chose rock\n")
         return "The Computer Won!"
     elif p1smove == 'r' and cmove == 'p':
+        print ("\nYou chose paper\n")
         return "The Computer Won!"
     elif p1smove == "r" and cmove == "r":
+        print ("\nYou guys both chose rock\n")
         return "It was a Tie!"
     elif p1smove == 'p' and cmove == 'p':
+        print ("\nYou guys both chose paper\n")
         return "It was a Tie!"
     elif p1smove == 's' and cmove == 's':
-        return "It was a Tie"
+        print ("\nYou guys both chose scissors\n")
+        return "It was a Tie!"
         
 
 def get_full_move(short_move):
@@ -56,17 +65,10 @@ def get_full_move(short_move):
 
 
 def print_score(player_score, comp_score, tie):
-    print ("You have {} points \nThe computer has {} points\nYou guys tied {} times.".format(player_score,comp_score, tie))
+    print ("You have {} points \n The computer has {} points\n You guys tied {} times.".format(player_score,comp_score, tie))
     player_score = int(player_score)
     comp_score = int(comp_score)
     tie = int(tie)
-    if player_score > comp_score:
-        print ("You win with {} points".format(player_score))
-    elif comp_score > player_score:
-        print ("You lost by " + (comp_score - player_score) + " point!!")
-    elif comp_score == player_score:
-        print ("You are tied with the computer.")
-
 
 def rps():
     player_score = 0
@@ -74,15 +76,16 @@ def rps():
     ties = 0
     rounds = get_rounds()
     for x in range(rounds):
-        player_1 = get_p1_move()
-        computer_1 = get_comp_move()
-        winner = get_round_winner(player_1,computer_1)
+        p1smove = get_p1_move()
+        cmove = get_comp_move()
+        winner = get_round_winner(p1smove,cmove)
         print(winner)
-        if winner == "Player":
+        if winner == "The player wins!":
             player_score = player_score + 1
-        elif winner == "Computer":
+        elif winner == "The Computer Won!":
             comp_score = comp_score + 1
-        elif winner == "Tie":
+        elif winner == "It was a Tie!":
             ties = ties + 1
     print_score(player_score, comp_score, ties)
+    
 rps()
