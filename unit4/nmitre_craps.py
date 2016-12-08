@@ -12,9 +12,9 @@ def roll2dice():
     return dice_sum
     
 #   function name: get_bet 
-#   purpose: get the amount of money the players wants to play.
-#   arguments: none 
-#   returns: the amount of money the player betted
+#   purpose: to get the amount to be bet from the user. Validate the amount and repeatedly ask them until they enter in something valid.
+#   arguments: bank amounts
+#   returns: The chosen valid bet amount 
 
 def get_bet():
 
@@ -28,3 +28,18 @@ def get_bet():
 #       if player lost: return "lose"
 
 def roll_result():
+    
+#   function name: Rounds():
+#   purpose: the amount of rounds that the player wants to play
+#   argument: none 
+#   return: rounds chosen
+
+def rounds():
+
+#   function name: craps():
+#   arguments: none
+
+
+
+
+
