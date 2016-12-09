@@ -38,7 +38,7 @@ def rounds():
 
 #   function name: craps():
 #   arguments: none
-
+#   return: return full game. 
 
 
 
