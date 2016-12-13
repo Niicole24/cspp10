@@ -1,4 +1,5 @@
 import random 
+
 #   function name: roll2dice 
 #   purpose: generating two random dice rolls and prints out, and returns the sum 
 #   arguments: none 
@@ -17,6 +18,7 @@ def roll2dice():
 #   returns: The chosen valid bet amount 
 
 def get_bet():
+    bank_amount = 
 
 #   function name: roll_result
 #   purpose: get the result of the roll
@@ -27,8 +29,11 @@ def get_bet():
 #       if player wins: return "win"
 #       if player lost: return "lose"
 
-def roll_result():
-    
+def roll_result(dice_sum):
+    if (dice_sum == 2) or (dice_sum == 3) or (dice_sum == 12):
+        return "lose"
+    elif (dice_sum == 7) or (dice_sum == 11):
+        return = "win"
 #   function name: Rounds():
 #   purpose: the amount of rounds that the player wants to play
 #   argument: none 
@@ -38,7 +43,8 @@ def rounds():
 
 #   function name: craps():
 #   arguments: none
-#   return: return full game. 
+#   return: return full game.
+#   purpose: is to play the game. and run it complete.
 
 
 
