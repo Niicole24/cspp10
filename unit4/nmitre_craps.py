@@ -1,4 +1,6 @@
 import random 
+bank_amount = 100 
+print("Welcome to craps where most of the time you loose your money but it's okay :)")
 
 #   function name: roll2dice 
 #   purpose: generating two random dice rolls and prints out, and returns the sum 
@@ -17,9 +19,20 @@ def roll2dice():
 #   arguments: bank amounts
 #   returns: The chosen valid bet amount 
 
-def get_bet():
-    bank_amount = 
-
+def get_bet(bank_amount):
+    bet = int(input("How much would you like to bet?"))
+    while True:
+        if bet < 0:
+            print("There's no negative numbers allowed!")
+            
+        elif bet <= bank_amount:
+            return bet
+            
+        elif bet > 100:
+            print("You dont have that type of money with you!")
+        
+        
+        
 #   function name: roll_result
 #   purpose: get the result of the roll
 #   arguments: 
@@ -33,19 +46,13 @@ def roll_result(dice_sum):
     if (dice_sum == 2) or (dice_sum == 3) or (dice_sum == 12):
         return "lose"
     elif (dice_sum == 7) or (dice_sum == 11):
-        return = "win"
+        return "win"
+    else: 
+        return dice_sum
+    
 #   function name: Rounds():
 #   purpose: the amount of rounds that the player wants to play
 #   argument: none 
 #   return: rounds chosen
 
 def rounds():
-
-#   function name: craps():
-#   arguments: none
-#   return: return full game.
-#   purpose: is to play the game. and run it complete.
-
-
-
-
