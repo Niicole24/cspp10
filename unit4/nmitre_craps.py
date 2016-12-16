@@ -2,7 +2,6 @@ import random
 bank_amount = 100 
 print("Welcome to craps where most of the time you loose your money but it's okay :)")
 
-
 def roll2dice():
     dice1 = random.randint(1,6)
     dice2 = random.randint(1,6)
@@ -24,13 +23,15 @@ def get_bet(bank_amount):
             print("You dont have that type of money with you!")
 
 
-def roll_result(dice_sum):
+def roll_result(dice_sum,point_number):
     if dice_sum == 2 or dice_sum == 3 or dice_sum == 12:
-        return "Player loses"
+        return "Player loose"
     elif dice_sum == 7 or dice_sum == 11:
         return "House wins"
-    elif dice_sum == 4 or dice_sum == 5 or dice_sum == 6 or dice_sum == 8 or dice_sum == 9 or dice_sum == 10:
-        print ("Point number is {}.".format(dice_sum))
+    elif point_number == 4 or point_number == 5 or point_number == 6 or point_number == 8 or point_number == 9 or point_number == 10:
+        print ("Point number is {}.".format(point_number))
+
+def 
     
 #def point_roll(get_bet,roll_result,bet):
 # roll_result()
