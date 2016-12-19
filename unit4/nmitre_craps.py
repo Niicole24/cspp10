@@ -23,10 +23,10 @@ def get_bet(bank_amount):
             print("You dont have that type of money with you!")
 
 
-def roll_result(dice_sum,point_number):
-    if dice_sum == 2 or dice_sum == 3 or dice_sum == 12:
+def roll_result(player_sum,house_sum,point_number):
+    if player_sum == 2 or player_sum == 3 or player_sum == 12:
         return "Player loose"
-    elif dice_sum == 7 or dice_sum == 11:
+    elif house_sum == 7 or house_sum == 11:
         return "House wins"
     elif point_number == 4 or point_number == 5 or point_number == 6 or point_number == 8 or point_number == 9 or point_number == 10:
         print ("Point number is {}.".format(point_number))
