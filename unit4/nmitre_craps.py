@@ -25,10 +25,8 @@ def get_bet(bank_amount):
     while True:
         if bet < 0:
             print("There's no negative numbers allowed!")
-            
         elif bet <= bank_amount:
             return bet
-            
         elif bet > 100:
             print("You dont have that type of money with you!")
 
@@ -42,9 +40,9 @@ def get_bet(bank_amount):
 #       if player lost: return "lose"
 
 def first_roll(player_sum,point_roll):
-    if player_sum == (2) or (3) or (12):
-        return "Player loose"
-    elif player_sum == (7) or (11):
+    if player_sum == 2 or 3 or 12:
+        return "Player loses"
+    elif player_sum == 7 or 11:
         return "House wins"
     elif point_roll == 4 or point_roll == 5 or point_roll == 6 or point_roll == 8 or point_roll == 9 or point_roll == 10:
         print ("Point number is {}.".format(point_roll))
@@ -53,4 +51,4 @@ def point_number():
     dice_1 = random.randint(1,6)
     dice_2 = random.randint(1,6)
     new_dice = dice_1 + dice_2
-    
+    new
