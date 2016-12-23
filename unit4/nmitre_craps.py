@@ -51,4 +51,4 @@ def point_number():
     dice_1 = random.randint(1,6)
     dice_2 = random.randint(1,6)
     new_dice = dice_1 + dice_2
-    new
+    new_dice1 = dice_1 != dice_2 
