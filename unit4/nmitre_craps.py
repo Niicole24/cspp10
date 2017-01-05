@@ -50,6 +50,8 @@ def update_of_bank(bet,result,bank_amount):
         return ("You have Lost! Bank amount {}.".format(bank_amount))
     return bank_amount
 
+
+
 def second_roll(dice_sum):
     while True:
         new_dice1 = random.randint(1,6)
