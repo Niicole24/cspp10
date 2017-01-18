@@ -11,12 +11,12 @@ def get_bet(bank_amount):
     bet = int(input("How much would you like to bet?: "))
     while True:
         if bet < 0:
-            print("There's no negative numbers allowed!")
+            print("You're not allowed to but negative numbers !")
         elif bet <= bank_amount:
             return bet
         elif bet > 100:
-            print("You dont have that type of money with you!")
-        bet = int(input("How much would you like to bet?: "))
+            print("You dont have that type of money :\!")
+    bet = int(input("How much would you like to bet?: "))
 
 #   function name: roll2dice 
 #   purpose: generating two random dice rolls and prints out, and returns the sum 
@@ -27,11 +27,11 @@ def get_roll2dice():
     dice1 = random.randint(1,6)
     dice2 = random.randint(1,6)
     dice_sum = dice1 + dice2
-    print ("Rolled 2 dice: {},{}\nDice sum {}".format(dice1,dice2,dice_sum))
+    print ("\nRolled 2 dice: {},{}\nDice sum {}".format(dice1,dice2,dice_sum))
     if dice_sum == 2 or 3 or 12:
-        return 'Player loses'
+        return "Player lost"
     elif dice_sum == 7 or 11:
-        return 'Player wins'
+        return "Player won"
     else:
         return dice_sum
     
@@ -41,13 +41,13 @@ def get_roll2dice():
 #   returns: the amount of money the player won or lost
 
 def update_of_bank(bet,result,bank_amount):
-    if result == 'Player wins':
-        bank_amount = bet - bet
+    if result == "Player won":
+        bank_amount = bet + bank_amount
         return ("You have Won! Bank amount {}.".format(bank_amount))
     
-    elif result == 'Player loses':
-        bank_amount = bet + bet
-        return ("You have Lost! Bank amount {}.".format(bank_amount))
+    elif result == "Player lost":
+        bank_amount = bet - bank_amount
+        return ("\nYou have Lost! Bank amount {}.".format(bank_amount))
     return bank_amount
 
 
@@ -73,20 +73,17 @@ def craps():
         dice_sum = roll2dice
         new_dice_sum = second_roll(dice_sum)
     
-        if dice_sum == 'Player wins':
-            bank_amount = bet - bet
-            print("You have Won! Bank amount {}.".format(bank_amount))
-        elif dice_sum == 'Player loses':
-            bank_amount = bet + bet
-            print("You have Lost! Bank amount {}.".format(bank_amount))
+        if dice_sum == "Player won":
+            bank_amount = bet + bank_amount
+            print("You have Won :)! Bank amount {}.".format(bank_amount))
+        elif dice_sum == "Player lost":
+            bank_amount = bet - bank_amount
+            print("\nYou have Lost, sucks to be you :( \nBank amount is {}.".format(bank_amount))
         elif dice_sum == dice_sum:
             break
 
-
-    print("Your point number is: {}".format(dice_sum))
-    
-    if new_dice_sum == dice_sum:
-        bank_amount = bank_amount + bet
-        print("You win Heres your bank amount: {}.".format(bank_amount))
+        if new_dice_sum == dice_sum:
+            bank_amount = bank_amount + bet
+            print("You win Here's your bank amount: {}.".format(bank_amount))
     
 craps()
